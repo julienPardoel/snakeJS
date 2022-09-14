@@ -27,6 +27,7 @@ class Snake {
       default:
         break;
     }
+    head.teleport();
   }
   update() {
     for (const block of this.blocks) {
