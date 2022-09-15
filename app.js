@@ -2,7 +2,9 @@ const gameSize = 600;
 const squareSize = 20;
 const canvas = document.querySelector("#game");
 const ctx = canvas.getContext("2d");
+
 const snake = new Snake(squareSize);
+const food = new Food();
 let currentDirection = "right";
 
 function deteckKeyPressed() {
@@ -39,10 +41,12 @@ function clearScreen() {
 function update() {
   clearScreen();
   snake.update();
+  food.draw();
   setTimeout(update, 200);
 }
 function start() {
   deteckKeyPressed();
+
   update();
 }
 start();

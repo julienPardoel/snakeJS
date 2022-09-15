@@ -1,8 +1,8 @@
 class Snake {
-  constructor(size) {
+  constructor() {
     this.x = 0;
     this.y = 0;
-    this.blockSize = size;
+    this.blockSize = squareSize;
     this.blocks = [];
     this.addBlock(this.x, this.y);
   }
