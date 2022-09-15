@@ -1,5 +1,5 @@
 const gameSize = 600;
-const squareSize = 20;
+const squareSize = 10;
 const canvas = document.querySelector("#game");
 const ctx = canvas.getContext("2d");
 
@@ -40,9 +40,11 @@ function clearScreen() {
 
 function update() {
   clearScreen();
-  snake.update();
   food.draw();
-  setTimeout(update, 200);
+  snake.update();
+  if (snake.alive) {
+    setTimeout(update, 150);
+  }
 }
 function start() {
   deteckKeyPressed();

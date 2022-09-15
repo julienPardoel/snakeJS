@@ -1,11 +1,14 @@
-body{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#game{
-    background: black;
+
+#game {
+  background: black;
+  border: 5px solid rgb(185, 70, 35);
 }
